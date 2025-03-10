@@ -17,9 +17,17 @@ public class SlidesController : MonoBehaviour
     public void Next()
     {
         currentSlide++;
+        if (currentSlide >= slides.Count)
+        {
+            currentSlide = slides.Count - 1;
+        }
     }
     public void Previous()
     {
         currentSlide--;
+        if (currentSlide < 0)
+        {
+            currentSlide = 0;
+        }
     }
 }
